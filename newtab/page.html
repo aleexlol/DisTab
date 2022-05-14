@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>DisTab</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <a href="https://www.google.com/">
+                <div class="sb-icon">
+                    <i class="fa fa-google" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Google</div>
+                </div>
+            </a>
+            <div class="line"></div>
+            <a href="https://boxhillhs-vic.compass.education/">
+                <div class="sb-icon">
+                    <i class="fa fa-compass" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Compass</div>
+                </div>
+            </a>
+            <a href="https://mathspace.co/student/">
+                <div class="sb-icon">
+                    <i class="fa fa-superscript" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Mathspace</div>
+                </div>
+            </a>
+            <a href="https://groklearning.com/launch/">
+                <div class="sb-icon">
+                    <i class="fa fa-code" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Grok</div>
+                </div>
+            </a>
+            <a href="https://stileapp.com/au/institutions/7500/subjects/355403">
+                <div class="sb-icon">
+                    <i class="fa fa-flask" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Stile</div>
+                </div>
+            </a>
+            <a href="https://www.jacplus.com.au/secure/Bookshelf">
+                <div class="sb-icon">
+                    <i class="fa fa-bookmark" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">JacPlus</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com">
+                <div class="sb-icon">
+                    <i class="fa fa-file" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Google Drive</div>
+                </div>
+            </a>
+
+            <a href="game.html" class="bottom">
+                <div class="sb-icon">
+                    <i class="fa fa-gamepad" style="font-size:2rem;"></i>
+                    <div class="sb-icon-tag">Game Mode</div>
+                </div>
+            </a>
+        </div>
+        <div class="content">
+            <div class="switch">
+                <div class="switch-out">
+                    <div class="switch-in"></div>
+                </div>
+            </div>
+            <div class="head">
+                <div class="distab">DisTab</div>
+                <div class="clock" id="time">02:02:02</div>
+            </div>
+            <script src="clock.js"></script>
+            <div class="searchbar">
+                <i class="fa fa-search search-icon" style="font-size:1rem;"></i>
+                <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_self">
+                    <input name="sitesearch" type="hidden">
+                    <input autocomplete="off" class="form-control search" name="q" placeholder="Search Google" type="text">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
