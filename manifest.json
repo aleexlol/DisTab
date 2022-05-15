@@ -1,21 +1,24 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "DisTab",
     "description": "'New Tab' Theme + Opens a webpage as a popup!",
     "version": "1.1.0",
     "icons": {"128": "icon_128.png"},
+    "action": {
+        
+    },
     "background": {
-        "scripts": [
-            "main.js"
-        ]
+        "service_worker": "background.js"
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "windows"
     ],
-    "browser_action": {
-       
-    },
-	"chrome_url_overrides" : {
-		"newtab": "newtab\\page.html"
-	}
+    "host_permissions": [
+        "http://*/",
+        "https://*/"
+    ],
+    "chrome_url_overrides" : {
+        "newtab": "newtab\\page.html"
+    }
 }
