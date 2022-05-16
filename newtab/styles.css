@@ -26,6 +26,7 @@ body {
     background: rgb(40, 43, 47);
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .switch-out:hover .switch-in {
@@ -34,12 +35,31 @@ body {
 }
 
 .sidebar {
+    direction: rtl;
     display: inline-block;
-    background: rgb(30, 32, 35);
-    height: 100vh;
-    width: 60px;
+    overflow: scroll;
+    height: 99vh;
+    width: 90%;
     margin: 0;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 3px;
+    padding-bottom: 50px;
+}
+
+.sb-content {
+    float: left;
+    overflow: visible;
+    width: 60px;
+    direction: ltr;
+    margin: 0;
+    
+}
+.sb-fill {
     position: fixed;
+    width: 74px;
+    height:100vh;
+    background: rgb(30, 32, 35);
 }
 
 .sb-icon {
@@ -52,6 +72,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: 0.25s;
+    direction: ltr;
 }
 
 .fa {
@@ -81,13 +102,13 @@ body {
 }
 
 .sb-icon-tag {
-    position: fixed;
     display: inline-block;
     vertical-align: center;
-    margin-top: 0.5rem;
+    position: absolute;
     font-family: "Uni Sans", sans-serif;
     font-size: 1rem;
     margin-left: 1.2rem;
+    margin-top: 0.5rem;
     background:rgb(30, 32, 35);
     color: rgb(220, 220, 220);
     padding: 0.5rem 0.2rem 0.5rem 0.2rem;
@@ -95,6 +116,13 @@ body {
     opacity: 0;
     transition: opacity 0.25s, visiblity 0s;
     border-radius: 0.4rem;
+}
+
+.sb-shortcut {
+    width: 80vh;
+    height: 50px;
+    direction: ltr;
+
 }
 
 .line {
@@ -180,4 +208,39 @@ body {
 .head:hover .distab {
     visibility: hidden;
     opacity: 0;
+}
+
+.mode-change, .settings {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 8px 5px 0 0;
+}
+
+.mc-box {
+    width: 60px;
+    background-color:rgb(30, 32, 35);
+    height: 130px;
+    margin-top: 100px;
+}
+
+/* 
+Scrollbar
+*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(30, 32, 35);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(40, 42, 45);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(0, 0, 0, 0)
 }
