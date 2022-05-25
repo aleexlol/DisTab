@@ -1,6 +1,6 @@
 const button = document.getElementById("create-button")
 button.addEventListener("click", function() {
-    //chrome.storage.sync.set({"key":[]}, function() {})
+    //chrome.storage.local.set({"key":[]}, function() {})
     const name = document.getElementById("shortcut-name").value
     const url = document.getElementById("shortcut-url").value
     const icon = "fa-" + document.getElementById("shortcut-icon").value
@@ -13,7 +13,7 @@ button.addEventListener("click", function() {
         mode = "game"
     }
 
-    chrome.storage.sync.get(["key"], function(result) {
+    chrome.storage.local.get(["key"], function(result) {
         data = result.key
         console.log(result)
         console.log(data)
@@ -24,18 +24,18 @@ button.addEventListener("click", function() {
             "icon" : icon,
             "mode" : mode
         }
-                
+        
         if (!data) {
             data = []
         }
 
         data.push(obj)
 
-        chrome.storage.sync.set({"key": data}, function() {
+        chrome.storage.local.set({"key": data}, function() {
             console.log("success")
         })
         
-        chrome.storage.sync.get(["key"], function(result) {
+        chrome.storage.local.get(["key"], function(result) {
             console.log(result.key)
         })
 
