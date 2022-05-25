@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings</title>
+        <link rel="stylesheet" href="../settings.css">
+    </head>
+    <body>
+        <a class="exit" href="../settings.html">
+            <div class="exit-text">X</div>
+        </a>
+        <div class="main">
+            <h1>NEW SHORTCUT</h1>
+            <form>
+                <input type="text" placeholder="Shortcut Name (e.g. Google)" class="input" id="shortcut-name" autocomplete="off">
+                <input type="text" placeholder="Shortcut URL (e.g. https://www.google.com/)" class="input" id="shortcut-url" autocomplete="off">
+                <input type="text" placeholder="FA Icon (e.g. id-card)" class="input" id="shortcut-icon" autocomplete="off">
+                <br>
+                <label>
+                    <input type="radio" class="radio" name="mode" id="work-mode" checked>
+                    Work Mode
+                </label>
+                <label>
+                    <input type="radio" class="radio" name="mode" id="game-mode">
+                    Game Mode
+                </label>
+            </form>
+            <button class="input button" id="create-button">Create</button>
+        </div>
+    </body>
+    <script src="addShortcut.js"></script>
+</html>
