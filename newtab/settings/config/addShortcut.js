@@ -24,6 +24,11 @@ button.addEventListener("click", function() {
             "icon" : icon,
             "mode" : mode
         }
+                
+        if (!data) {
+            data = []
+        }
+
         data.push(obj)
 
         chrome.storage.sync.set({"key": data}, function() {
