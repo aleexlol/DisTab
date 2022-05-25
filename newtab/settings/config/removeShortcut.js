@@ -1,5 +1,5 @@
 //get all shortcuts
-chrome.storage.local.get(["key"], function (result) {
+chrome.storage.sync.get(["key"], function (result) {
     for(var i = 0; i < result.key.length; i++) {
         item = result.key[i]
         temp = " " + item.name + " | " + item.url
@@ -24,7 +24,7 @@ chrome.storage.local.get(["key"], function (result) {
 const button = document.getElementById("remove-button")
 button.addEventListener("click", function() {
     //find number of items in list
-    chrome.storage.local.get(["key"], function (result) {
+    chrome.storage.sync.get(["key"], function (result) {
         let count = result.key.length
         console.log("Number of items: " + count + ". Savedata:")
         console.log(result)
@@ -36,18 +36,18 @@ button.addEventListener("click", function() {
                 checked = i
                 console.log(checked)
                 //get items , find + remove checked
-                chrome.storage.local.get(["key"], function (inResult) {
+                chrome.storage.sync.get(["key"], function (inResult) {
                     console.log(inResult)
                     if (checked == 0) {
                         inResult.key.shift()
                         let list = inResult.key
-                        chrome.storage.local.set({"key": list}, function() {
+                        chrome.storage.sync.set({"key": list}, function() {
                             console.log("Removed")
                         })
                     } else {
                         inResult.key.splice(checked, i)
                         let list = inResult.key
-                        chrome.storage.local.set({"key": list}, function() {
+                        chrome.storage.sync.set({"key": list}, function() {
                             console.log("Removed")
                         })
                     }
