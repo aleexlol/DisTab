@@ -1,4 +1,4 @@
-chrome.storage.local.get(["key"], function (result) {
+chrome.storage.sync.get(["key"], function (result) {
     console.log("found script")
     shortcuts = result.key
     for (var i = 0; i < shortcuts.length; i++) {
