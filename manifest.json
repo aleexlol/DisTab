@@ -12,7 +12,8 @@
     },
     "permissions": [
         "tabs",
-        "windows"
+        "windows",
+        "storage"
     ],
     "host_permissions": [
         "http://*/",
