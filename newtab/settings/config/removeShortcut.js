@@ -1,5 +1,8 @@
 //get all shortcuts
 chrome.storage.sync.get(["key"], function (result) {
+    if (!result.key) {
+        result.key = []
+    }
     for(var i = 0; i < result.key.length; i++) {
         item = result.key[i]
         temp = " " + item.name + " | " + item.url
