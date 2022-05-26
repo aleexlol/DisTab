@@ -1,6 +1,9 @@
 chrome.storage.sync.get(["key"], function (result) {
     console.log("found script")
     shortcuts = result.key
+    if (!shortcuts) {
+        shortcuts = []
+    }
     for (var i = 0; i < shortcuts.length; i++) {
         item = shortcuts[i]
         //Construct shortcut
